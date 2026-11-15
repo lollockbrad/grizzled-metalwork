@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Sitemap line gets added once the live Vercel URL is confirmed.

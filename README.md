@@ -43,8 +43,31 @@ checked on a preview link before it merges to `main` and goes live.
 
 ## Making changes
 
-Edit `index.html` — all copy, styling, and the show countdown live in that one file.
-Commit, push to `main`, and Vercel does the rest.
+Copy lives in the page files (`index.html`, `gallery.html`, `contact.html`);
+shared styling lives in `styles.css`. Edit, commit, push to `main`, and Vercel does the rest.
+You can also edit any file right on GitHub: open the file, click the pencil icon,
+change the text, and commit — that's a push, so the live site updates on its own.
+
+## SEO — where everything lives
+
+There's no SEO plugin here; the SEO fields are lines in each page's `<head>`,
+near the top of the file. Same fields Yoast gives you, just typed instead of form-filled:
+
+| SEO element | Where it is |
+|---|---|
+| SEO title | The `<title>` line in each page's `<head>` |
+| Meta description | The `<meta name="description" ...>` line under it |
+| H1 / headings | The `<h1>`, `<h2>`, `<h3>` tags in the page body — one H1 per page |
+| Image alt text | The `alt="..."` inside each `<img>` tag |
+| Clean URLs | `vercel.json` (`cleanUrls`) — pages serve as `/gallery`, not `/gallery.html` |
+| Crawl access | `robots.txt` — currently allows everything |
+
+Page targets (one intent per page, no overlap):
+Home = Grizzled Metalworks / Ken Steelman brand · Gallery = his pieces ·
+Contact = how to reach / buy from Ken.
+
+Still to add once the live URL is confirmed: `sitemap.xml`, the sitemap line in
+`robots.txt`, Open Graph share tags, and Google Search Console verification.
 
 ## Still to add
 
